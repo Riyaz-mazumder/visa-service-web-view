@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { DataService } from '../data.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-inquiry-form',
@@ -8,9 +10,32 @@ import { NgForm } from '@angular/forms';
 })
 export class InquiryFormComponent {
 
+
+  constructor(
+    private service: DataService,
+    private router: Router,
+    ){}
+
+  searchedData!: any;
+
   submit(data: NgForm){
-     console.log(data);
-     
+     this.service.searchVisa(data.value.visaNumber, data.value.moiRef, data.value.holderPassportNumber).subscribe({
+      next: r =>{
+
+        this.searchedData = r;
+
+        if(this.searchedData.length <1){
+           alert("Wrong Input Data")
+        }else{
+          this.service.setData(this.searchedData);
+
+          
+        }
+        
+      },error: e =>{
+        alert(e);
+      }
+     })
   }
 
 }
