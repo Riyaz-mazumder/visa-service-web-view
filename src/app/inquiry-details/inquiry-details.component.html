@@ -6,13 +6,13 @@
      </div>
        <!-- tabs content  -->
        <div class="content">
-           <div class="tab-content tab-content-active" data-tab="1">
+           <div class="tab-content tab-content-active" data-tab="1" *ngFor="let i of data">
                <div id="top-down"></div>
                <div class="visa-card">
                 <div class="section-1">
                     <div class="visa-number">
                         <p>Visa Number</p>
-                        <h4>255159846</h4>
+                        <h4>{{i.visaNumber}}</h4>
                     </div>
                     <div class="visa-status">
                         <p>Visa Status</p>
@@ -21,23 +21,23 @@
                 </div>
                 <div class="section-2">
                     <div>
-                        <p><span class="title">Visa Type : </span> <span class="body">Private Sector Work Visa</span></p>
+                        <p><span class="title">Visa Type : </span> <span class="body">{{i.visaType}}</span></p>
                     </div>
                     <div>
-                        <p><span class="title">Visa Purpose : </span> <span class="body">Work</span></p>
+                        <p><span class="title">Visa Purpose : </span> <span class="body">{{i.visaPurpose}}</span></p>
                     </div>
                     <div>
-                        <p><span class="title">Place of Issue : </span> <span class="body">Bangladesh</span></p>
+                        <p><span class="title">Place of Issue : </span> <span class="body">{{i.placeOfIssue}}</span></p>
                     </div>
                 </div>
                 <div class="section-3">
                     <div>
                         <p>Date of Issue</p>
-                        <h2>2023-11-25</h2>
+                        <h2>{{i.dateOfIssue}}</h2>
                     </div>
                     <div>
                         <p>Date of Expiry</p>
-                        <h2>2024-02-25</h2>
+                        <h2>{{i.dateOfExpiry}}</h2>
                     </div>
                 </div>
                </div>
@@ -50,55 +50,55 @@
 
                     <div>
                         <p>Full Name</p>
-                        <p class="feld">Monira Mitu</p>
+                        <p class="feld">{{i.holderFullName}}</p>
                     </div>
                     <hr>
                     <div>
                         <p>MOI Reference</p>
-                        <p class="feld">34039098</p>
+                        <p class="feld">{{i.holderMOIReference}}</p>
                     </div>
                     <hr>
                     <div>
                         <p>Occupation</p>
-                        <p class="feld">Feelengs</p>
+                        <p class="feld">{{i.holderOccupation}}</p>
                     </div>
                     <hr>
                     <div class="toside">
                         <div>
                             <p>Nationality</p>
-                            <p class="feld">Bangladeshi</p>
+                            <p class="feld">{{i.holderNationality}}</p>
                         </div>
                         <div>
                             <p>Gender</p>
-                            <p class="feld">Female</p>
+                            <p class="feld">{{i.holderGender}}</p>
                         </div>  
                     </div>
                     <hr>
                     <div class="toside">
                         <div>
                             <p>Passport No</p>
-                            <p class="feld">A2024-2026</p>
+                            <p class="feld">{{i.holderPassportNo}}</p>
                         </div>
                         <div>
                             <p>Passport Type</p>
-                            <p class="feld">Normal</p>
+                            <p class="feld">{{i.holderPassportType}}</p>
                         </div>
                     </div>
                     <hr>
                     <div class="toside">
                         <div>
                             <p>Date Of Birth</p>
-                            <p class="feld">1998-11-25</p>
+                            <p class="feld">{{i.holderDateOfBirth}}</p>
                         </div>
                         <div>
                             <p>Place Of Issue</p>
-                            <p class="feld">Bangladesh</p>
+                            <p class="feld">{{i.holderPlaceOfIssue}}</p>
                         </div> 
                     </div>
                     <hr>
                     <div>
                         <p>Date of Expiry</p>
-                        <p class="feld">2040</p>
+                        <p class="feld">{{i.holderExpiryDate}}</p>
                     </div>
                 </div>
                </div>
@@ -111,17 +111,17 @@
 
                     <div>
                         <p>Full Name</p>
-                        <p class="feld">Riaj Uddin</p>
+                        <p class="feld">{{i.employerFullName}}</p>
                     </div>
                     <hr>
                     <div class="toside">
                         <div>
                             <p>MOI Reference</p>
-                            <p class="feld">3333257</p>
+                            <p class="feld">{{i.employerMOIReference}}</p>
                         </div>
                         <div>
                             <p>Mobile Number</p>
-                            <p class="feld">0</p>
+                            <p class="feld">{{i.employerMobileNumber}}</p>
                         </div> 
                     </div>
                 </div>

@@ -25,15 +25,15 @@ export class InquiryFormComponent {
         this.searchedData = r;
 
         if(this.searchedData.length <1){
-           alert("Wrong Input Data")
+           alert("Wrong Input Data");
         }else{
           this.service.setData(this.searchedData);
-
-          
+          console.log(this.searchedData[0]);
+          this.router.navigate(['/inquiry-details']);
         }
         
       },error: e =>{
-        alert(e);
+        alert("Somthing Went Wrong!");
       }
      })
   }

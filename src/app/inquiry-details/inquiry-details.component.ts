@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-inquiry-details',
@@ -8,10 +9,15 @@ import { Component, OnInit } from '@angular/core';
 export class InquiryDetailsComponent implements OnInit{
      
   
-  constructor() { }
+  constructor(private service: DataService) {}
+
+
+  data!: any;
+
 
   ngOnInit(): void {
     this.setupTabs();
+    this.data = this.service.getData();
   }
 
   setupTabs() {
