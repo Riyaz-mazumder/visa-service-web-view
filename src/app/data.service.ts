@@ -11,7 +11,7 @@ export class DataService {
 
   private data!: any;
 
-  private baseUrl = "http://localhost:8080/api/v1/app-visa"
+  private baseUrl = "https://api-evisa.logicmatrixllc.com/api/v1/app-visa"
 
   public searchVisa(visaNumber: string, moiRef: string, holderPassportNumber: string){
 
